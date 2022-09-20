@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;exception.Myownexception&apos; to &apos;E003_Myownexception&apos;&#x0D;&#x0A;- Original project: &apos;hello class&apos;&#x0D;&#x0A;- Original element: &apos;exception.Myownexception&apos;&#x0D;&#x0A;- Renamed element: &apos;exception.E003_Myownexception&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Myownexception&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;exception{Myownexception.java[Myownexception" matchStrategy="1" name="E003_Myownexception" qualified="false" references="true" similarDeclarations="false" stamp="1658420326134" textual="false" version="1.0"/>
+</session>

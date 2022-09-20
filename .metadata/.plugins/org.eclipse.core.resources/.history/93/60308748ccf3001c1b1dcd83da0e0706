@@ -1,0 +1,25 @@
+package impractical;
+
+public class Pattern3 {
+
+	public static void main(String[] args) {
+		int lines = 5;
+		int starcount = 5;
+		int spaceCount = 0;
+		for(int j=1;j<=lines;j++)
+		{
+			for(int k=5;k>=spaceCount;k--)
+			{
+				System.out.print( " ");
+			}
+		 for(int i=5;i>=starcount;i--)
+		 {
+			 System.out.print("*");
+		 }
+        System.out.println();
+        starcount--;
+        spaceCount++;
+		}
+	}
+
+}

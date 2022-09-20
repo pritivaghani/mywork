@@ -1,0 +1,8 @@
+package homeworkternary;
+
+public class maximumnumber_ternary {
+
+	public static void main(String[] args) {
+		int a = 700, b = 450, c = 900, maximun;
+		int r = maximun()
+}

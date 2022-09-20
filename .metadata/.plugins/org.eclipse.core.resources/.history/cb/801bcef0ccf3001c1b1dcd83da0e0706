@@ -1,0 +1,36 @@
+package impractical;
+
+public class Primenumbers {
+
+	public static void main(String[] args) {
+		
+	    int flag = 0;
+	 for(int a=100;a>=3;a--)
+	    {
+		for(int i=3;i<=a;i++)
+		{
+		    
+			if(a%i==0)
+		
+			flag = 1;
+			break;
+		}
+		}
+		if (flag==0)
+		{
+			System.out.println( "prime number");
+		}
+			else
+			{
+				System.out.println( " not prime number");
+		}
+		
+		}
+	    }
+	
+	    
+
+	
+
+
+

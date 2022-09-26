@@ -3,8 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
-<body>
+<style type="text/css">
+.tf{
+color : aqua;
+background-color : black;
+width : 150px;
+height : 20px;
+border : 3px dashed aqua;
+border-radius : 10px 2px 10px 2px;
+}
+</style>
 
+</head>
+<body style="color: red; background-color: black;">
+      <h1 align="center">Student Registration</h1>
+      <form action="Form_operation.html" method="get">
+      <fieldset>
+      <legend align="right">Registration</legend>
+      <lable>Username</lable>
+      <input type="text" name="uname" class="tf">
+      <br><br>
+         <lable>Email</lable>
+      <input type="text" name="email" class="tf">
+                 <br><br>
+           
+            <lable>Password</lable>
+          <input type="password" name="pass" class="tf">
+                <br><br>
+          
+                      <lable>Gender</lable>
+          <input type="radio" name="gn" checked="checked">Male
+          <input type="radio" name="gn">Female
+                          <br><br>
+          
+                                <lable>Languages</lable>
+                                <input type="checkbox">Gujarati
+                                          <input type="checkbox">English
+                                          <input type="checkbox">Hindi
+                                          <input type="checkbox">Marathi
+                                          <input type="checkbox">Tamil
+                                          <input type="checkbox">Panjabi
+            <br><br>
+            
+            <lable>Country</lable>
+           <select name="country" class="tf">
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Germony</option>
+            <option>Canada</option>                                
+           </select>    
+           <br><br>
+           
+           <lable>Address</lable>
+           <textarea rows="3" cols="15"></textarea>
+           <br><br>
+           
+           <input type="submit">
+           <input type="reset"> 
+           
+           <a href="https://github.com/Chintan-elite/14June-java-2022-all/blob/master/MyWebapp/src/main/webapp/form.html" target="_blank">Click me</a>
+                </fieldset>
+           </form>
 </body>
 </html>

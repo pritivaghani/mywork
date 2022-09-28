@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+     <script type="text/javascript">
+     function add() {
+		var a = document.getElementById("a")
+		var b = document.getElementById("b")
+		
+		if(a.value == null || a.value == "")
+			{
+			a.style.border="1px solid red"
+			return 
+			}
+		
+		if(b.value == null || b.value == "")
+			{
+			return alert("enter number")
+			}
+		
+		var result = document.getElementById("result")
+		var r = Number(a)+Number(b);
+		result.innerHTML=r;
+	}
+     
+     function sub() {
+    	var a = document.getElementById("a").value
+         var b = document.getElementById("b").value
+    	  var result = document.getElementById("result")
+    	var r = Number(a)-Number(b);
+    	 result.innerHTML=r;
+	}
+     
+    function mul() {
+    	var a = document.getElementById("a").value
+    	var b = document.getElementById("b").value
+    	var result = document.getElementById("result")
+    	var r = Number(a)*Number(b);
+    	result.innerHTML=r;
+		
+	} 
+    
+    function div() {
+    	var a = document.getElementById("a").value
+    	var b = document.getElementById("b").value
+    	var result = document.getElementById("result")
+    	var r = Number(a)/Number(b);
+    	result.innerHTML=r;
+		
+	}
+     
+    function showdate() {
+		var date = new Date();
+		document.getElementById("dt").innerHTML = date
+	}
+    //setTimeout(showdate,3000)
+  setInterval(showdate,1000)
+     </script>
+</head>
+<body>
+           
+       <input type="text" id="a">
+        
+        <input type="text" id="b">
+        
+        <button onmouseover="add()">add</button>
+        <button onmouseover="sub()">sub</button>
+        <button onmouseover="mul()">mul</button>
+        <button onmouseover="div()">div</button>
+        result : <span id="result"></span>
+        <hr>
+
+         <button onclick="showdate()">Today's Date</button>
+         <span id="dt"></span>
+</body>
+</html>

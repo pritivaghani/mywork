@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function call() {
+	document.getElementsByTagName("h1")[0]
+	.style.backgroundColor="red"
+	
+	 var btn = document.getElementById("btn")
+	btn.style.color="aqua"
+}
+
+function show() {
+	document.getElementsByTagName("h1")[0]
+	.style.backgroundColor="green"
+	
+	var btn = document.getElementById("btn")
+	btn.style.color="blue"
+}
+
+
+
+</script>
+</head>
+<body>
+              <h1>Hello World</body>
+              <h1>Hello Java</h1>
+             <!-- <button onclick="call()">Click me</button> --> 
+              <button onmouseover="call()" onmouseout="show()" id="btn">Click me</button>
+</html>

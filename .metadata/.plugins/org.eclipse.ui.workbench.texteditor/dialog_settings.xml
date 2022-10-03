@@ -6,7 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="DOLLAR"/>
 		<list key="findhistory">
+			<item value="Dollar"/>
+			<item value="USA"/>
+			<item value="search"/>
+			<item value="serch"/>
 		</list>
 		<list key="replacehistory">
 		</list>

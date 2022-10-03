@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="thread.Customer"/>
-    <fullyQualifiedTypeName name="thread.Calc"/>
     <fullyQualifiedTypeName name="thread.Mythread"/>
     <fullyQualifiedTypeName name="assignment_2.Value"/>
     <fullyQualifiedTypeName name="assignment_2.A036_Try_catch"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+   <script type="text/javascript">
+   
+   function validation() {
+	var fname = document.getElementById("fname").value;
+	var lname = document.getElementById("lname").value;
+	var email = document.getElementById("email").value;
+	var pass = document.getElementById("pass").value;
+	var cpass = document.getElementById("cpass").value;
+	var fnameexp = /^[a-zA-Z]+$/
+	var lnameexp =/^[a-zA-Z]+$/
+	var emailexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+	var passexp = /^[a-zA-Z0-9!@#$&*?.\^]{6,16}$/;
+	
+	if(fname == "" || fname == null)
+		{
+		document.getElementById("fnameerror").innerHTML="Frist name should not be blank."
+		}
+	else if(!fnameexp.test(fname))
+		{
+		document.getElementById("fnameerror").innerHTML="only character allowed."
+		}
+	else
+		{
+		document.getElementById("fnameerror").innerHTML=""
+		}
+   
+  
+	if(lname == "" || lname == null)
+	   {
+	   document.getElementById("lnameerror").innerHTML="Last name should not be blank."
+	   }
+	else if(!lnameexp.test(lname))
+		{
+		document.getElementById("lnameerror").innerHTML="Last name contains only character."
+		}
+   else
+	   {
+	   document.getElementById("lnameerror").innerHTML=""
+	   }
+   
+   
+   if(email == "" || email == null)
+   {
+   document.getElementById("emailerror").innerHTML="Email should not be blank."
+   }
+   else if(!emailexp.test(email))
+	   {
+	   document.getElementById("emailerror").innerHTML="Invalid email"
+	   }
+else
+   {
+   document.getElementById("emailerror").innerHTML=""
+   }
+   
+  
+   if(pass == "" || pass == null)
+   {
+   document.getElementById("passerror").innerHTML="Password should not be blank."
+   }
+  // else if(pass.length<5 || pass.length>15)
+	//   {
+	  // document.getElementById("passerror").innerHTML="Password should be between 5 to 15."
+	   //}
+   
+  else if(!passexp.test(pass))
+	  {
+	  document.getElementById("passerror").innerHTML="Invalid password"
+	  }
+else
+   {
+   document.getElementById("passerror").innerHTML=""
+   }
+   
+  
+   if( pass != cpass)
+   {
+   document.getElementById("cpasserror").innerHTML="Password and Confirmpassword should be same."
+   }
+else
+   {
+   document.getElementById("cpasserror").innerHTML=""
+   }
+   }   
+   </script>
+   <style type="text/css">
+   .err
+   {
+   color : red;
+   }
+   
+   </style>
+</head>
+<body>
+<form action="">
+<table>
+           <tr>
+           <td><lable>Frist Name</lable></td>
+           <td><input type="text" name="fname" id="fname" onkeyup="validation()"></td>
+           <td><span id="fnameerror" class="err"></span></td>
+           </tr>
+
+           <tr>
+              <td><label>Last Name</label></td>
+           <td><input type="text" name="lname" id="lname" onkeyup="validation()"></td>
+           <td><span id="lnameerror" class="err"></span></td>
+             </tr>
+
+             <tr>
+             <td><lable>Email</lable></td>
+           <td><input type="text" name="email" id="email" onkeyup="validation()"></td>
+           <td><span id="emailerror" class="err"></span></td>
+           </tr>
+           
+           <tr>
+           <td><lable>Password</lable></td>
+           <td><input type="text" name="pass" id="pass" onkeyup="validation()"></td>
+           <td><span id="passerror" class="err"></span></td>
+           </tr>
+           
+           <tr>
+           <td><lable>Confirm Password</lable></td>
+           <td><input type="text" name="cpass" id="cpass" onkeyup="validation()"></td>
+           <td><span id="cpasserror" class="err"></span></td>
+           </tr>
+           
+           <tr>
+                      <td><lable></lable></td>
+           <td><input type="submit"></td>
+           </tr>
+</table>
+</form>
+
+
+
+</body>
+</html>

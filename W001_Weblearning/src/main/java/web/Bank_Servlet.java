@@ -1,6 +1,7 @@
 package web;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +18,11 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
              String code = req.getParameter("code");
              
              
-             System.out.println(bname+" "+num+" "+code);
-
+             //System.out.println(bname+" "+num+" "+code);
+PrintWriter pw = resp.getWriter();
+      pw.print(bname);
+       pw.print(num);
+        pw.print(code);
 
 }
 	

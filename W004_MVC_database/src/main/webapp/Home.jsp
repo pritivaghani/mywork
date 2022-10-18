@@ -7,8 +7,7 @@
 <title>Home</title>
 </head>
 <body>
-  <form action="">
-     <span>${msg}</span>
-     </form>
+       <h1>Welcome ,${msg}</h1>
+       <a href="display">Show all User</a>
 </body>
 </html>

@@ -39,6 +39,7 @@
      <input type="reset" class="btn btn-primary">
      
      </form>
+     <a href="Login.jsp">Login</a>
      </div>
      </div>
      </div>

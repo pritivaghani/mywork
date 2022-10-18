@@ -33,6 +33,7 @@
      <input type="submit" class="btn btn-success">
      
      </form>
+     <a href="Index.jsp">Sign up</a>
      </div>
      </div>
      </div>

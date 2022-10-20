@@ -23,7 +23,7 @@ public class Delete_controller extends HttpServlet
     	    
     	    if(i>0)
     	    {
-    	    	req.getRequestDispatcher("Display.jsp").forward(req, resp);
+    	    	req.getRequestDispatcher("display").forward(req, resp);
     	    }
        
        

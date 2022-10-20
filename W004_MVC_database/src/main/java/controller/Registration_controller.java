@@ -26,11 +26,22 @@ public class Registration_controller extends HttpServlet
            u.setPass(pass);
       
          User_dao d = new User_dao();
-         int i = d.addUser(u);
-         if(i>0)
+           
+         boolean b = d.isemailexit(u);
+         if(b)
          {
+        	 req.setAttribute("err", "eamil already exit!!!");
+        	 req.getRequestDispatcher("Index.jsp").forward(req, resp);
+         }
+         else
+         {
+             int i = d.addUser(u);
+             if(i>0)
+             {
+
         	 req.setAttribute("msg", "Registration success!!!");
         	 req.getRequestDispatcher("Index.jsp").forward(req, resp);
+         }
          }
       }
 }

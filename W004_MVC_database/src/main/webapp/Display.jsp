@@ -27,7 +27,9 @@
        <th colspan="2">Action</th>
 </tr>
 <%
-   ArrayList<User> al = (ArrayList)request.getAttribute("data");
+
+
+ArrayList<User> al = (ArrayList)request.getAttribute("data");
    for(User u : al){
 %>
      <tr>
@@ -35,7 +37,7 @@
           <td><%=u.getUname()%></td> 
           <td><%=u.getEmail()%></td> 
           <td><%=u.getPass()%></td> 
-          <td><a class="btn btn-primary">Update</a></td>
+          <td><a class="btn btn-primary" href="update?uid=<%=u.getId()%>">Update</a></td>
           <td><a class="btn btn-danger" href="delete?did=<%=u.getId()%>">Delete</a></td>
          </tr> 
          <% }

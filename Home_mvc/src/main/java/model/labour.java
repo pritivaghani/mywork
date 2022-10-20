@@ -1,11 +1,10 @@
 package model;
 
-import java.sql.PreparedStatement;
+public class labour {
 
-public class User {
 
 	int id;
-	String uname;
+	String lname;
 	String email;
 	String pass;
 	public int getId() {
@@ -14,11 +13,11 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getUname() {
-		return uname;
+	public String getLname() {
+		return lname;
 	}
-	public void setUname(String uname) {
-		this.uname = uname;
+	public void setLname(String lname) {
+		this.lname = lname;
 	}
 	public String getEmail() {
 		return email;
@@ -33,7 +32,8 @@ public class User {
 		this.pass = pass;
 	}
 	
+		
+	}
 	
-	
-	
-}
+
+

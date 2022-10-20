@@ -107,4 +107,75 @@ public class User_dao {
 		return i;
 	}
 
+
+	public User getuserbyid(int uid) {
+   User u = new User();
+    
+   try {
+	PreparedStatement p = c.prepareStatement("select * from user where id=?");
+	p.setInt(1, uid);
+	
+	ResultSet r = p.executeQuery();
+	
+	if(r.next())
+	{
+		u.setId(r.getInt(1));
+		u.setUname(r.getString(2));
+		u.setEmail(r.getString(3));
+		u.setPass(r.getString(4));
+	}
+} catch (SQLException e) {
+	e.printStackTrace();
+}
+   
+		
+		
+		return u;
+	}
+
+
+	public int updateuser(User u) {
+		int i = 0;
+		try {
+			PreparedStatement p = c.prepareStatement("update user set uname=?, email=?, pass=? where id=?");
+			p.setInt(4, u.getId());
+			p.setString(1, u.getUname());
+			p.setString(2, u.getEmail());
+			p.setString(3, u.getPass());
+			
+			 i = p.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return i;
+	}
+
+
+	public boolean isemailexit(User u) {
+  
+		boolean b = false;
+		
+		try {
+			PreparedStatement p = c.prepareStatement("select * from user where email=?");
+			p.setString(1, u.getEmail());
+			ResultSet r = p.executeQuery();
+			
+			if(r.next())
+			{
+				b=true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return b;
+	}
+
+
+	
+
+
 }

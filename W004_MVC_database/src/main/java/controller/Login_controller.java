@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.User_dao;
 import model.User;
@@ -29,7 +30,10 @@ public class Login_controller extends HttpServlet
        boolean i = d.logincheck(u);
        if(i)
        {
-    	   req.setAttribute("msg", email);
+    	   //req.setAttribute("msg", email);
+    	   
+    	   HttpSession s = req.getSession();
+    	   s.setAttribute("email", email);
     	   req.getRequestDispatcher("Home.jsp").forward(req, resp);
        }
        else

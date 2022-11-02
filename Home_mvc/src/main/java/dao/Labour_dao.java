@@ -42,6 +42,30 @@ public class Labour_dao {
 		}
 				return i;
 	}
+
+
+
+	public boolean logincheck(labour l) {
+        boolean i = false;
+        try {
+			PreparedStatement p = c.prepareStatement("select * from labour where email=? and pass=?");
+			p.setString(1,l.getEmail());
+			p.setString(2, l.getPass());
+			
+			ResultSet r = p.executeQuery();
+			if(r.next())
+			{
+				i = true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+        
+		
+		
+		return i;
+	}
 	
 	
 }

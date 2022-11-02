@@ -17,6 +17,7 @@
       <h1>Registration From</h1>
       <form action="reg">
       <span class="text-success">${msg}</span>
+            <span class="text-danger">${err}</span>
       
       <div class="form-group">
       <lable>Labourname</lable>
@@ -37,8 +38,8 @@
       <input type="submit" class="btn btn-success">
       <input type="reset" class="btn btn-primary">
       
-      
-      </form>
+        </form>
+        <a href="Login.jsp">Login</a>
 
 
 </div>

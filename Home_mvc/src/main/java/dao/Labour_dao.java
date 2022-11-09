@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.labour;
 
@@ -65,6 +66,37 @@ public class Labour_dao {
 		
 		
 		return i;
+	}
+
+
+
+	public ArrayList<labour> getalllabour() {
+    ArrayList<labour> al = new ArrayList<>();
+    
+    try {
+		PreparedStatement p = c.prepareStatement("select * from labour");
+		ResultSet r = p.executeQuery();
+		while(r.next())
+		{
+			labour l = new labour();
+			l.setId(r.getInt(1));
+			l.setLname(r.getString(2));
+			l.setEmail(r.getString(3));
+			l.setPass(r.getString(4));
+			
+			al.add(l);
+			
+		}
+		
+	
+	} 
+    catch (SQLException e) {
+		e.printStackTrace();
+	}
+    
+		
+		
+		return al;
 	}
 	
 	

@@ -30,7 +30,7 @@ public class Login_controller extends HttpServlet
         if(i)
         {
           req.setAttribute("msg", email);
-          req.getRequestDispatcher("Display.jsp").forward(req, resp);
+          req.getRequestDispatcher("Home.jsp").forward(req, resp);
         }
         else
         {

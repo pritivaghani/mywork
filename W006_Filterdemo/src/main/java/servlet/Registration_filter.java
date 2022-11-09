@@ -29,21 +29,32 @@ public class Registration_filter extends HttpFilter implements Filter {
 		
 		RequestDispatcher r = request.getRequestDispatcher("Registration.jsp");
 		
-		if(uname=="null" || uname=="")
+		if(uname==null || uname=="")
 		{
 			request.setAttribute("err", "uname can not be blank" );
 			r.forward(request, response);
 		}
 		
-		if(email=="null" || email=="")
+		if(email==null || email=="")
 		{
 			request.setAttribute("msg", "email can notbe blank");
 			r.forward(request, response);
 		}
 		
-		if(pass=="null" || pass=="")
+		else if(!Email_validation.emailcheck(email))
+		{
+			request.setAttribute("msg", "Invalid format");
+			r.forward(request, response);
+		}
+		if(pass==null || pass=="")
 		{
 			request.setAttribute("wrong", "pass can notbe blank");
+			r.forward(request, response);
+		}
+		
+		else if(!Password_validation.passvalidation(pass))
+		{
+			request.setAttribute("wrong", "Invalid format for password");
 			r.forward(request, response);
 		}
 		chain.doFilter(request, response);

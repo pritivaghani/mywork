@@ -21,13 +21,13 @@ public class Registration_controller extends HttpServlet
 	  String email = req.getParameter("email");
 	  String pass = req.getParameter("pass");
 	  
-	  labour u = new labour();
-	  u.setLname(lname);
-	  u.setEmail(email);
-	  u.setPass(pass);
+	  labour l = new labour();
+	  l.setLname(lname);
+	  l.setEmail(email);
+	  l.setPass(pass);
 	
 	Labour_dao d = new Labour_dao();
-	int i = d.addlabour(u);
+	int i = d.addlabour(l);
 	
 	if(i>0)
 	{

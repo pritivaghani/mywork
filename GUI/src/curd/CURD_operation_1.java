@@ -195,7 +195,7 @@ public class CURD_operation_1 {
 		
 		JLabel lblNewLabel = new JLabel("Student Registration");
 		lblNewLabel.setFont(new Font("Tahoma", Font.ITALIC, 18));
-		lblNewLabel.setBounds(323, 20, 194, 30);
+		lblNewLabel.setBounds(308, 20, 209, 30);
 		frame.getContentPane().add(lblNewLabel);
 		
 		table = new JTable();

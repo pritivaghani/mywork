@@ -85,19 +85,81 @@ public class Labour_dao {
 			l.setPass(r.getString(4));
 			
 			al.add(l);
-			
-		}
-		
-	
-	} 
+				}
+		} 
     catch (SQLException e) {
 		e.printStackTrace();
 	}
     
-		
-		
-		return al;
+	return al;
 	}
+
+public labour getlabourbyid(int lid) {
+
+		labour l = new labour();
+		
+		try {
+			PreparedStatement p = c.prepareStatement("select * from labour where id=?");
+            p.setInt(1, lid);
+			
+			ResultSet r = p.executeQuery();
+			if(r.next())
+			{
+				l.setId(r.getInt(1));
+				l.setLname(r.getString(2));
+				l.setEmail(r.getString(3));
+				l.setPass(r.getString(4));
+			}
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return l;
+	}
+
+
+
+public int updatelabour(labour l) {
+
+	int i = 0;
+	
+	try {
+		PreparedStatement p = c.prepareStatement("update labour set lname=? , email=?, pass=? where id=?");
+		p.setInt(4, l.getId());
+		p.setString(1, l.getLname());
+		p.setString(2, l.getEmail());
+		p.setString(3, l.getPass());
+		
+		i = p.executeUpdate();
+		
+	}
+	catch (SQLException e) {
+		e.printStackTrace();
+	}
+	return i;
+}
+
+
+
+public int deletelabour(int did) {
+
+	int i = 0;
+	
+	try {
+		PreparedStatement p = c.prepareStatement("delete from labour where id=?");
+		p.setInt(1, did);
+		
+		i = p.executeUpdate();
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+	
+	return i;
+}
 	
 	
 }

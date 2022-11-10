@@ -19,6 +19,7 @@
      <span class="text-success">${msg}</span>
      
      <input type="hidden" value="${user.getId()}" name="uid">
+     
      <div class="form-group">
      <label>Username</label>
      <input type="text" name="uname" class="form-control" value="${user.getUname()}">

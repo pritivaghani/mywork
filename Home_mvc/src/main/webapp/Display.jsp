@@ -15,7 +15,7 @@
 
 <div class="container">
 <div class="row">
-<div class="col-md-6 md auto">
+<div class="col-md-6 m-auto">
 
 
 <h1 align="center">Labour Data</h1>
@@ -40,7 +40,7 @@ for(labour l : al)
    <td><%=l.getLname()%></td>
    <td><%=l.getEmail()%></td>
    <td><%=l.getPass()%></td>
-   <td><a class="btn btn-primary" href="update?uid=<%=l.getId()%>">Update</a></td>
+   <td><a class="btn btn-primary" href="update?lid=<%=l.getId()%>">Update</a></td>
    <td><a class="btn btn-danger" href="delete?did=<%=l.getId()%>">Delete</a></td>
    </tr>
      <% }

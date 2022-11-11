@@ -40,7 +40,7 @@
       
       <select id="state" onchange="getcity(value)">
        <option>---select state---</option>
-      </select>
+      </select>								
       
       <select id="city">
        <option>---select city---</option>

@@ -16,6 +16,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JScrollBar;
 import javax.swing.JMenu;
 import javax.swing.JProgressBar;
+import javax.swing.JMenuItem;
 
 public class Swing {
 
@@ -157,7 +158,7 @@ public class Swing {
 		panel.add(btnReset);
 		
 		table_1 = new JTable();
-		table_1.setBounds(342, 23, 424, 458);
+		table_1.setBounds(342, 70, 424, 411);
 		frmRegistrationForm.getContentPane().add(table_1);
 		
 		JButton btnRefreshTable = new JButton("Refresh Table");
@@ -166,12 +167,19 @@ public class Swing {
 		frmRegistrationForm.getContentPane().add(btnRefreshTable);
 		
 		JScrollBar vertical = new JScrollBar();
-		vertical.setBounds(765, 23, 25, 458);
+		vertical.setBounds(765, 23, 25, 463);
 		frmRegistrationForm.getContentPane().add(vertical);
 		
 		JScrollBar horizontal = new JScrollBar();
 		horizontal.setOrientation(JScrollBar.HORIZONTAL);
 		horizontal.setBounds(342, 483, 448, 29);
 		frmRegistrationForm.getContentPane().add(horizontal);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(342, 46, 443, 22);
+		frmRegistrationForm.getContentPane().add(menuBar);
+		
+		
+		
 	}
 }

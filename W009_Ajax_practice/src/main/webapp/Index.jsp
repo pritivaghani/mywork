@@ -12,9 +12,10 @@
 <script type="text/javascript">
 
        $(document).ready(function(){
-    	  // alert("ok");
+    	  //alert("ok");
+    	   getdata();
     	   
-    	   
+    	   $("#btn1").hide();
     	   
        })
        
@@ -28,13 +29,80 @@
     	   var country = $("#country").val()
     	   
     	   $.post("reg",{ename,email,pass,gender,qua,country},function(f){
-    		//alert("ok");
+    		alert("ok");
     		   $("#msg").html(f);
+    		   
+    		   getdata()
     	   })
        }
 
 
+       function getdata()
+       {
+    	   $.get("view",{},function(f){
+    		  // alert(f)
+    		    const data = JSON.parse(f);
+    		   var row="";
+    		   row=row+"<tr><th>Id</th><th>Ename</th><th>Email</th><th>Pass</th><th>Gender</th><th>Qualification</th><th>Country</th></tr>"
+    	   for (var i=0;i<data.length;i++)
+    		   {
+    		   var employee = data[i];
+    		   row=row+"<tr><td>"+employee.id+"</td><td>"+employee.ename+"</td><td>"+employee.email+"</td><td>"+employee.pass+"</td><td>"+employee.gender+"</td><td>"+employee.qua+"</td><td>"+employee.country+"</td><td><buttons class='btn btn-danger bg-denger' onclick='deleteemployee("+employee.id+")'>Delete</button></td><td><buttons class='btn btn-primary bg-primary' onclick='getemployeebyid("+employee.id+")'>Update</button></td></tr>"
+    		   }
+    		   $("#table").html(row); 
+    	   })
+       }
 
+       function deleteemployee(eid)
+       {
+    	$.post("update",{eid},function(f){
+    		alert(f)
+    		getdata()
+    		
+    	})
+       }
+       
+       function getemployeebyid(eid)
+       {
+    	   $.get("update",{eid},function(f){
+    		 
+    		   var data = JSON.parse(f);
+    		   
+    		   $("#eid").val(data.id);
+    		   $("#ename").val(data.ename);
+    		   $("#email").val(data.email);
+    		   $("#pass").val(data.pass);
+    		   $("#gender").val(data.gender);
+    		   $("#qua").val(data.qua);
+    		   $("#country").val(data.country);
+    		   
+    		   $("#btn1").show();
+    		   $("#btn").hide();
+    		   
+    	   })
+       }
+       
+       function updateemployee()
+       {
+    	   
+           var eid = $("#eid").val()
+    	   var ename = $("#ename").val()
+    	   var email = $("#email").val()
+    	   var pass = $("#pass").val()
+    	   var gender = $("#gender").val()
+    	   var qua = $("#qua").val()
+    	   var country = $("#country").val()
+    	   
+    	   $.get("reg",{eid,ename,email,pass,gender,qua,country},function(f){
+    		   $("#msg").html(f);
+    		   
+    		   getdata()
+    		   
+    		   $("#btn").show();
+    		   $("#btn1").hide();
+    	   })
+    		   
+       }
 </script>
 </head>
 <body>
@@ -45,6 +113,8 @@
         
         <h1 class="text-success">Add Employee</h1>
         <span class="text-success" id="msg"></span>
+        
+        <input type="hidden" name="eid" id="eid">
         <div class="form-group">
         <lable>Ename</lable>
         <input type="text" name="ename" id="ename" class="form-control">
@@ -87,7 +157,8 @@
         <br>
         
         <button class="btn btn-success" id="btn" onclick="addemployee()">Submit</button>
-               </div>
+              <button class="btn btn-success" id="btn1" onclick="updateemployee()">Update</button>
+       </div>
         
         <div class="col-md-8">
         <h1 class="text-success">View Employee</h1>

@@ -11,11 +11,11 @@ import javax.mail.internet.MimeMessage;
 
 public class Email_sending {
 
-//	public static void main(String[] args) {
-//
-//	 send("vaghanitarun13@gmail.com", "22546");
-//	 
-//	}	
+	public static void main(String[] args) {
+
+	 send("vaghanij303@gmail.com", "22546");
+	 
+	}	
 	  public static void send(String to,String msg){  
           //Get properties object    
           Properties props = new Properties();    
@@ -29,7 +29,7 @@ public class Email_sending {
           Session session = Session.getDefaultInstance(props,    
            new javax.mail.Authenticator() {    
            protected javax.mail.PasswordAuthentication getPasswordAuthentication() {    
-           return new javax.mail.PasswordAuthentication("vaghanip303@gmail.com","Pritivaghani0604");  
+           return new javax.mail.PasswordAuthentication("vaghanip303@gmail.com","xwhrxdidsftchpli");  
            }    
           });    
           //compose message    

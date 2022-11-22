@@ -25,6 +25,22 @@ public class Addemployee_controller extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+	PrintWriter p = response.getWriter();
+	Employee e = new Employee();
+	e.setId(Integer.parseInt(request.getParameter("eid")));
+	e.setEname(request.getParameter("ename"));
+	e.setEmail(request.getParameter("email"));
+	e.setPass(request.getParameter("pass"));
+    e.setGender(request.getParameter("gender")); 
+    e.setQua(request.getParameter("qua"));
+    e.setCountry(request.getParameter("country"));
+    
+    Employee_dao d = new Employee_dao();
+   int i = d.updateemployee(e);
+   if(i>0)
+   {
+	   p.append("updated successfully!!!");
+   }
 	
 	}
 

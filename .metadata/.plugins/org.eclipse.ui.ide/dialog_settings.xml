@@ -17,4 +17,8 @@
 		<item key="DIALOG_X_ORIGIN" value="611"/>
 		<item key="DIALOG_Y_ORIGIN" value="274"/>
 	</section>
+	<section name="ResourceNavigator">
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1655271395131"/>
+	</section>
 </section>

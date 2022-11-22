@@ -13,10 +13,12 @@ public class Email_sending {
 
 	public static void main(String[] args) {
 
-	 send("vaghanij303@gmail.com", "22546");
+	 send("pritivaghani007@gmail.com", "22546");
 	 
 	}	
-	  public static void send(String to,String msg){  
+	// copy from google whole code....
+	  public static void send(String to,String msg)//change
+	  {  
           //Get properties object    
           Properties props = new Properties();    
           props.put("mail.smtp.host", "smtp.gmail.com");    
@@ -29,14 +31,14 @@ public class Email_sending {
           Session session = Session.getDefaultInstance(props,    
            new javax.mail.Authenticator() {    
            protected javax.mail.PasswordAuthentication getPasswordAuthentication() {    
-           return new javax.mail.PasswordAuthentication("vaghanip303@gmail.com","xwhrxdidsftchpli");  
+           return new javax.mail.PasswordAuthentication("vaghanip303@gmail.com","xwhrxdidsftchpli"); //change 
            }    
           });    
           //compose message    
           try {    
            MimeMessage message = new MimeMessage(session);    
            message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));    
-           message.setSubject("OTP verification");    
+           message.setSubject("OTP verification"); //change   
            message.setText(msg);    
            //send message  
            Transport.send(message);    

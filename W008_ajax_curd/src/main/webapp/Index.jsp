@@ -55,11 +55,20 @@
     
     function deletestudent(sid)
     {
+    	//for confirmation
+    	
+    	if(confirm("do you really want to delete?")==true)
+    		{
     	$.post("update",{sid},function(f){
     		alert(f)
     		getdata()
-    		
+    	
     	})
+    		}
+    	else
+    		{
+    		alert("you have canclled")
+    		}
     	 }
     
     function getstudentbyid(sid)

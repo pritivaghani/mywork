@@ -25,6 +25,8 @@ public class Upload_servlet extends HttpServlet {
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		//for uploading file
+		
 		String path = "C:\\Users\\Himlay\\eclipse-workspace\\W014_File_uploading\\src\\main\\webapp\\Img";
 		
 	String name = request.getParameter("name");
@@ -33,6 +35,8 @@ public class Upload_servlet extends HttpServlet {
 	String filename = Paths.get(file.getSubmittedFileName()).getFileName().toString();
 	
 	file.write(path+File.separator+filename);
+	
+	//for database connection
 	
 	file_model f = new file_model();
 	f.setFilename(filename);

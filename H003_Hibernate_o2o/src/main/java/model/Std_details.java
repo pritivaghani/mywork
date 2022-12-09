@@ -21,7 +21,7 @@ public class Std_details {
 	@Column(name="address")
 	String address;
 	
-	@OneToOne(mappedBy = "Std_details", cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "sd", cascade = CascadeType.ALL)
 	Std s;
 
 	public int getSdid() {

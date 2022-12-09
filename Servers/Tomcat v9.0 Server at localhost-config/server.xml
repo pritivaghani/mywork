@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="W010_OTP_verification" path="/W010_OTP_verification" reloadable="true" source="org.eclipse.jst.jee.server:W010_OTP_verification"/><Context docBase="W009_Ajax_practice" path="/W009_Ajax_practice" reloadable="true" source="org.eclipse.jst.jee.server:W009_Ajax_practice"/><Context docBase="W008_ajax_curd" path="/W008_ajax_curd" reloadable="true" source="org.eclipse.jst.jee.server:W008_ajax_curd"/><Context docBase="W011_Session_Listener" path="/W011_Session_Listener" reloadable="true" source="org.eclipse.jst.jee.server:W011_Session_Listener"/><Context docBase="W012_JSP" path="/W012_JSP" reloadable="true" source="org.eclipse.jst.jee.server:W012_JSP"/><Context docBase="W004_MVC_database" path="/W004_MVC_database" reloadable="true" source="org.eclipse.jst.jee.server:W004_MVC_database"/><Context docBase="W014_File_uploading" path="/W014_File_uploading" reloadable="true" source="org.eclipse.jst.jee.server:W014_File_uploading"/><Context docBase="W013_Jstl_custome" path="/W013_Jstl_custome" reloadable="true" source="org.eclipse.jst.jee.server:W013_Jstl_custome"/><Context docBase="H002_Hibernate_web" path="/H002_Hibernate_web" reloadable="true" source="org.eclipse.jst.j2ee.server:H002_Hibernate_web"/></Host>
+      <Context docBase="H004_Hibernate_webpractice" path="/H002_Hibernate_web" reloadable="true" source="org.eclipse.jst.j2ee.server:H004_Hibernate_webpractice"/></Host>
     </Engine>
   </Service>
 </Server>

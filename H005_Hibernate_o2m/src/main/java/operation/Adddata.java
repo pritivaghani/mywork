@@ -14,7 +14,7 @@ public class Adddata {
 
 		
 		SessionFactory sf = new Configuration()
-				.configure("Hibernate.cfg.xml")
+				.configure("resource/Hibernate.cfg.xml")
 				.addAnnotatedClass(Category.class)
 				.addAnnotatedClass(Product.class)
 				.buildSessionFactory();
@@ -33,7 +33,7 @@ public class Adddata {
 		Product p1 = new Product();
 		p1.setPname("Ac");
 		p1.setPrice("2000");
-		p.setC(ct);
+		p1.setC(ct);
 		
 		s.save(ct);
 		s.save(p);

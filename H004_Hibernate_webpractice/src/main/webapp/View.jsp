@@ -24,8 +24,8 @@
 <td>${dt.getName()}</td>
 <td>${dt.getPrice()}</td>
 <td>${dt.getQty()}</td>
-<td><a href="update?fid=${dt.getId()}&&action="delete">Delete</a></td>
-<td><a href="update?fid=${dt.getId()}&&action="update">Update</a></td>
+<td><a href="update?fid=${dt.getId()}&&action=delete">Delete</a></td>
+<td><a href="update?fid=${dt.getId()}&&action=update">Update</a></td>
 
 </tr>
 

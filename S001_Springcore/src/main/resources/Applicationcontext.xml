@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean class="com.Student" id="std" autowire="byType">
+	<property name="id" value="12"></property>
+	<property name="name" value="priti"></property>
+	<property name="email" value="priti@gmail.com"></property>
+	<property name="sub">
+	<list>
+	<value>maths</value>
+	<value>science</value>
+	<value>computer</value>
+	</list>
+	</property>
+	
+	<property name="lang">
+	<set>
+	<value>gujarati</value>
+	<value>english</value>
+	<value>hindi</value>
+	</set>
+	</property>
+	</bean>
+	
+	<bean class="com.Address" id="adr1">
+	<property name="state" value="gujarat"></property>
+	<property name="city" value="surat"></property>
+	</bean>
+	
+</beans>

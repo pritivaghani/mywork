@@ -1,11 +1,37 @@
 package com;
 
+import java.util.List;
+import java.util.Set;
+
 public class Student {
 
 	
 	int id;
 	String name;
 	String email;
+	List<String> sub;
+	Set<String> lang;
+	
+	Address adr;
+	
+	public Address getAdr() {
+		return adr;
+	}
+	public void setAdr(Address adr) {
+		this.adr = adr;
+	}
+	public List<String> getSub() {
+		return sub;
+	}
+	public void setSub(List<String> sub) {
+		this.sub = sub;
+	}
+	public Set<String> getLang() {
+		return lang;
+	}
+	public void setLang(Set<String> lang) {
+		this.lang = lang;
+	}
 	public int getId() {
 		return id;
 	}
@@ -25,5 +51,18 @@ public class Student {
 		this.email = email;
 	}
 	
-	
+	public void display()
+	{
+		System.out.println(id+" "+name+" "+email);
+		for(String s : sub)
+		{
+			System.out.println(s);
+		}
+		
+		for(String s : lang)
+		{
+			System.out.println(s);
+		}
+		adr.display();
+	}
 }

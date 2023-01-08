@@ -2,4 +2,8 @@
 <typeInfoHistroy>
     <typeInfo handle="=hello class/C:\/Program Files\/Java\/jdk-18.0.1.1\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/18\/docs\/api\/=/=/module=/true=/&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1655217349218"/>
     <typeInfo handle="=S002_Spring_annotation/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com{User.java[User" modifiers="513" timestamp="1672141604673"/>
+    <typeInfo handle="=S004_SpringMVC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{User_service.java[User_service" modifiers="513" timestamp="1672763339941"/>
+    <typeInfo handle="=S004_SpringMVC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.dao{User_Dao.java[User_Dao" modifiers="513" timestamp="1672763971934"/>
+    <typeInfo handle="=S005_Spring_MVC1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.dao{User_dao.java[User_dao" modifiers="513" timestamp="1673081245066"/>
+    <typeInfo handle="=S003_Spring_MVC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.dao{Studentdao.java[Studentdao" modifiers="513" timestamp="1673001637599"/>
 </typeInfoHistroy>

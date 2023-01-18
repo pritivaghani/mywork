@@ -43,8 +43,7 @@ public class User_controller {
 		model.addObject("user", user);
 		model.addObject("userlist", us.getalluser());
 		
-		if(rs.hasErrors())
-		{
+		if(rs.hasErrors())		{
 			model.setViewName("Index");
 		}
 		else
@@ -53,7 +52,7 @@ public class User_controller {
 		us.adduser(u);
 		model.addObject("msg", "registration succesfully....");
 		model.setViewName("Index");
-		}
+	}
 		return model;
 	}
 	

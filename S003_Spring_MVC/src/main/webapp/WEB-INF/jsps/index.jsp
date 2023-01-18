@@ -11,8 +11,8 @@
 
 <h1>Registration Page</h1>
 <form:form action="addstudent" method="get" modelAttribute="student">
-<form:hidden path="id"/>
-<form:label path="name">Name</form:label>
+<form:input path="id"/>
+<form:label path="name">StudentName</form:label>
 <form:input path="name"/>
 <form:label path="email">Email</form:label>
 <form:input path="email"/>
@@ -20,6 +20,8 @@
 <form:input path="pass"/>
 <input type="submit">
 </form:form>
+
+<br>
 
 <a href="view">Display all Student</a>
 

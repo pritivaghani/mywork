@@ -25,8 +25,8 @@
 <td>${dt.getName()}</td>
 <td>${dt.getEmail()}</td>
 <td>${dt.getPass()}</td>
-<td><a href="delete/${dt.getId()}">Delete</a></td>
-<td><a href="update/${dt.getId()}">Update</a></td>
+<td><a href="delete?did=${dt.getId()}">Delete</a></td>
+<td><a href="update?did=${dt.getId()}">Update</a></td>
 </tr>
 </c:forEach>
 

@@ -20,6 +20,7 @@ public class StudentdaoIMPL implements Studentdao {
 	
 	@Override
 	public void addstudent(Student s) {
+			System.out.println(s.getId()+" "+s.getName());
            Session se = sessionFactory.openSession();
            Transaction tx = se.beginTransaction();
            se.saveOrUpdate(s);
@@ -40,7 +41,7 @@ public class StudentdaoIMPL implements Studentdao {
 	public Student getbyid(int id) {
 		 Session se = sessionFactory.openSession();
          Transaction tx = se.beginTransaction();
-         return se.load(Student.class, id);
+         return se.get(Student.class, id);
 	}
 
 	@Override

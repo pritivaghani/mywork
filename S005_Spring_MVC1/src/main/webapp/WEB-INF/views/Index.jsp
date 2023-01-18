@@ -12,6 +12,7 @@
 
 <h1>Registration file</h1>
 <span>${msg}</span>
+<form:hidden path="id"/>
 <form:form action="adduser" modelAttribute="user">
 <form:label path="name"></form:label>
 <form:input path="name"/>

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.method.annotation.ModelAndViewMethodReturnValueHandler;
 
@@ -36,10 +37,13 @@ public class Studentcontroller {
 	@RequestMapping("/addstudent")
 	public ModelAndView addstudent(@ModelAttribute("student") Student s)
 	{
+		System.out.println(s.getId());
 		//System.out.println(s.getName()+" "+s.getEmail()+" "+s.getPass());
 		studentservice.addstudent(s);
-		ModelAndView model = new ModelAndView();
-         model.setViewName("Home");		
+        ModelAndView model = new ModelAndView();
+		model.addObject("data", studentservice.getallstudent());
+
+        model.setViewName("Home");		
 		return model;
 	}
 	
@@ -53,8 +57,8 @@ public class Studentcontroller {
 		
 	}
 	
-	@RequestMapping("/delete/{did}")
-	public ModelAndView deletestudent(@PathVariable(value = "did") Integer id)
+	@RequestMapping("/delete")
+	public ModelAndView deletestudent(@RequestParam(value = "did") Integer id)
 	{
 		ModelAndView model = new ModelAndView();
 		studentservice.deletestudent(id);
@@ -64,12 +68,12 @@ public class Studentcontroller {
 		
 	}
 	
-	@RequestMapping("/update/{uid}")
-	public ModelAndView getstudentbyid(@PathVariable(value = "uid") Integer id)
+	@RequestMapping("/update")
+	public ModelAndView getstudentbyid(@RequestParam(value = "did") Integer id)
 	{
 		ModelAndView model = new ModelAndView();
 		Student s = studentservice.getbyid(id);
-		model.addObject("studnet", s);
+		model.addObject("student", s);
 		model.setViewName("Index");
 		return model;
 		

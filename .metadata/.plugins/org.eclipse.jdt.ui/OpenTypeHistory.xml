@@ -7,4 +7,9 @@
     <typeInfo handle="=S005_Spring_MVC1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.dao{User_dao.java[User_dao" modifiers="513" timestamp="1673081245066"/>
     <typeInfo handle="=S003_Spring_MVC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.dao{Studentdao.java[Studentdao" modifiers="513" timestamp="1673001637599"/>
     <typeInfo handle="=Spring_boot1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.server{Employeeserver.java[Employeeserver" modifiers="513" timestamp="1673365640601"/>
+    <typeInfo handle="=RestAPI-Practice/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{Servantservice.java[Servantservice" modifiers="513" timestamp="1674125299527"/>
+    <typeInfo handle="=RestAPI-Practice/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.dao{Servantdao.java[Servantdao" modifiers="513" timestamp="1674125467913"/>
+    <typeInfo handle="=Inventory/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{Productservice.java[Productservice" modifiers="513" timestamp="1674220082943"/>
+    <typeInfo handle="=Inventory/C:\/Program Files\/Java\/jdk-18.0.1.1\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/18\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.util.concurrent(Flow$Publisher.class[Publisher" modifiers="1545" timestamp="1655217349218"/>
+    <typeInfo handle="=Inventory/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{Purchaseservice.java[Purchaseservice" modifiers="513" timestamp="1674283635831"/>
 </typeInfoHistroy>
